@@ -1,0 +1,18 @@
+{
+    "version": 2,
+    "routes": [
+        {
+            "src": "/api/(.*)",
+            "dest": "/api/$1.ts",
+            "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Headers": "*",
+                "Access-Control-Allow-Methods": "*"
+            }
+        }
+    ],
+    "env": {
+        "azure_secret": "@azure-secret",
+        "storage_keys": "@storage-keys"
+    }
+}
