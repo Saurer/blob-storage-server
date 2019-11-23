@@ -11,10 +11,10 @@ export default protect(async (req, res) => {
         success: true,
         data: {
             name: req.body.name,
-            creationTime: result.creationTime,
+            creationTime: result.lastModified,
             lastModified: result.lastModified,
             etag: result.etag,
-            contentLength: result.contentLength
+            contentLength: Number(result.contentLength)
         }
     });
 });
